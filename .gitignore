@@ -1,0 +1,16 @@
+# C# build folders
+bin/
+obj/
+
+# VS Code settings folder
+.vscode/
+
+# User-specific files
+*.user
+*.suo
+
+# Executable files
+*.exe
+
+# Logs or debug files
+*.log
