@@ -1,0 +1,4 @@
+.container { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; }
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.left, .right { border: 1px solid #e5e7eb; border-radius: 8px; padding: 1rem; }
+button { cursor: pointer; }

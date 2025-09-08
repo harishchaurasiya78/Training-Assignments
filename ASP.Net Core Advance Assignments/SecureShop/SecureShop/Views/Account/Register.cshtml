@@ -1,0 +1,10 @@
+@model SecureShop.Models.User
+<form asp-action="Register" method="post">
+    <input asp-for="Email" />
+    <span asp-validation-for="Email"></span>
+
+    <input asp-for="PasswordHash" type="password" />
+    <span asp-validation-for="PasswordHash"></span>
+
+    <button type="submit">Register</button>
+</form>

@@ -1,0 +1,10 @@
+<h2>Courses</h2>
+<ul class="course-list">
+  <li *ngFor="let c of courses" class="row">
+    <div class="meta">
+      <div class="title">{{ c.title }}</div>
+      <div class="sub">{{ c.category }} · {{ c.durationHours }}h · {{ c.level }}</div>
+    </div>
+    <button (click)="viewDetails(c)">View Details</button>
+  </li>
+</ul>

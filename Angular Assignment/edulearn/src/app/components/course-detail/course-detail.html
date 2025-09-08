@@ -1,0 +1,19 @@
+<h2>Course Details</h2>
+
+<div *ngIf="course; else empty">
+  <label>
+    <span>Title:</span>
+    <!-- Two‑Way Binding -->
+    <input type="text" [(ngModel)]="course.title" placeholder="Course title" />
+  </label>
+
+  <div class="detail-row"><strong>Category:</strong> {{ course.category }}</div>
+  <div class="detail-row"><strong>Duration:</strong> {{ course.durationHours }} hours</div>
+  <div class="detail-row"><strong>Level:</strong> {{ course.level }}</div>
+
+  <p class="hint">Try editing the title above — it updates instantly in the list.</p>
+</div>
+
+<ng-template #empty>
+  <p>Select a course from the list to see details.</p>
+</ng-template>

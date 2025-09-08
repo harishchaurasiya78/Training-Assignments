@@ -1,0 +1,16 @@
+<div class="container">
+  <h1>{{ title }}</h1>
+
+  <div class="grid">
+    <div class="left">
+      <app-course-list
+        [courses]="courses"
+        (selectCourse)="onCourseSelected($event)">
+      </app-course-list>
+    </div>
+
+    <div class="right">
+      <app-course-detail [course]="selectedCourse"></app-course-detail>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,4 @@
+label { display: flex; flex-direction: column; gap: .25rem; margin-bottom: .75rem; }
+input { padding: .5rem; border: 1px solid #d1d5db; border-radius: 6px; }
+.detail-row { margin: .25rem 0; }
+.hint { color: #6b7280; font-size: .9rem; margin-top: .5rem; }

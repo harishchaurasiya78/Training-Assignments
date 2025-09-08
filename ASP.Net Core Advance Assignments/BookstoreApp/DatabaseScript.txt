@@ -1,0 +1,47 @@
+CREATE DATABASE BookstoreDB;
+GO
+
+USE BookstoreDB;
+GO
+
+CREATE TABLE Books (
+    BookId INT PRIMARY KEY IDENTITY(1,1),
+    Title NVARCHAR(200) NOT NULL,
+    Author NVARCHAR(100) NOT NULL,
+    Price DECIMAL(10, 2) NOT NULL
+);
+GO
+
+-- Stored Procedures
+CREATE PROCEDURE AddBook
+    @Title NVARCHAR(200),
+    @Author NVARCHAR(100),
+    @Price DECIMAL(10, 2)
+AS
+BEGIN
+    INSERT INTO Books (Title, Author, Price)
+    VALUES (@Title, @Author, @Price);
+END;
+GO
+
+CREATE PROCEDURE UpdateBook
+    @BookId INT,
+    @Title NVARCHAR(200),
+    @Author NVARCHAR(100),
+    @Price DECIMAL(10, 2)
+AS
+BEGIN
+    UPDATE Books
+    SET Title = @Title, Author = @Author, Price = @Price
+    WHERE BookId = @BookId;
+END;
+GO
+
+CREATE PROCEDURE DeleteBook
+    @BookId INT
+AS
+BEGIN
+    DELETE FROM Books
+    WHERE BookId = @BookId;
+END;
+GO
