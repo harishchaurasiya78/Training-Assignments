@@ -1,0 +1,4 @@
+.container { width: 600px; margin: 20px auto; font-family: Arial; }
+table { width: 100%; border-collapse: collapse; }
+th, td { border: 1px solid #ddd; padding: 8px; }
+th { background: #f4f4f4; }

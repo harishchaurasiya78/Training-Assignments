@@ -1,0 +1,10 @@
+<div class="task-list">
+  <div class="task" *ngFor="let t of (tasks$ | async)">
+    <label>
+      <input type="checkbox" [checked]="t.completed" (change)="toggle(t)" />
+      <span [class.completed]="t.completed">{{ t.title }}</span>
+    </label>
+    <div class="desc">{{ t.description }}</div>
+  </div>
+</div>
+<button class="clear" (click)="clearCompleted()">Clear Completed</button>

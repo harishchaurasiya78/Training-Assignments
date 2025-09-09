@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>Users</h1>
+  <div *ngIf="loading">Loading...</div>
+  <div *ngIf="error">{{error}}</div>
+  <table *ngIf="!loading && !error" class="users-table">
+    <thead><tr><th>Name</th><th>Email</th></tr></thead>
+    <tbody>
+      <tr *ngFor="let u of users"><td>{{u.name}}</td><td>{{u.email}}</td></tr>
+    </tbody>
+  </table>
+</div>

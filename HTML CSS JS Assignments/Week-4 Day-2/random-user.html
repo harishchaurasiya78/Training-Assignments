@@ -1,0 +1,32 @@
+<html>
+<head>
+  <title>Random User Fetch</title>
+</head>
+<body>
+  <h2>Random User Info</h2>
+  <button onclick="fetchRandomUser()">Get Random User</button>
+
+  <div id="userInfo" style="margin-top: 20px;">
+    <!-- User details will appear here -->
+  </div>
+
+  <script>
+    function fetchRandomUser() {
+      fetch('https://randomuser.me/api/')
+        .then(response => response.json())
+        .then(data => {
+          const user = data.results[0];
+          const userInfo = `
+            <img src="${user.picture.large}" alt="Profile Picture" />
+            <p><strong>Name:</strong> ${user.name.title} ${user.name.first} ${user.name.last}</p>
+            <p><strong>Email:</strong> ${user.email}</p>
+          `;
+          document.getElementById('userInfo').innerHTML = userInfo;
+        })
+        .catch(error => {
+          document.getElementById('userInfo').innerHTML = `<p style="color:red;">Error: ${error}</p>`;
+        });
+    }
+  </script>
+</body>
+</html>

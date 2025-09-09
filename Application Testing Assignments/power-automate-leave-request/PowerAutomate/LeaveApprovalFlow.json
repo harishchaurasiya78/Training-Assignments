@@ -1,0 +1,22 @@
+{
+  "Name": "LeaveApprovalFlow",
+  "Trigger": "When a new request is submitted via chatbot",
+  "Actions": [
+    {
+      "Type": "SendApprovalRequest",
+      "Channel": "Teams/Email",
+      "Approvers": "Manager"
+    },
+    {
+      "Type": "Condition",
+      "IfApproved": [
+        "Update Dataverse: Status = Approved",
+        "Notify Employee (Teams/Email) with approved dates"
+      ],
+      "IfRejected": [
+        "Update Dataverse: Status = Rejected",
+        "Notify Employee (Teams/Email) with rejection reason"
+      ]
+    }
+  ]
+}

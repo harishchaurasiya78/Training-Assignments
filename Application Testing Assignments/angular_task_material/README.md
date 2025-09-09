@@ -1,0 +1,1 @@
+Angular Task Manager using Angular Material. Fetches mock tasks and allows add, toggle, complete all, with error handling.

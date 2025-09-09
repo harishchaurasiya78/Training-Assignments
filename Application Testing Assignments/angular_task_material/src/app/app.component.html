@@ -1,0 +1,20 @@
+<mat-card class="card">
+  <h2>Task Manager</h2>
+  <form (ngSubmit)="addTask()" class="add-form">
+    <mat-form-field appearance="outline" class="full">
+      <input matInput placeholder="New task title" [(ngModel)]="newTitle" name="title" />
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit">Add Task</button>
+    <button mat-button type="button" (click)="completeAll()">Complete All</button>
+  </form>
+
+  <div *ngIf="loading">Loading tasks...</div>
+  <div *ngIf="error" class="error">{{error}} <button mat-button (click)="load()">Retry</button></div>
+
+  <mat-list *ngIf="!loading && !error">
+    <mat-list-item *ngFor="let t of tasks" class="task-item">
+      <mat-checkbox [checked]="t.completed" (change)="toggle(t)"></mat-checkbox>
+      <div class="title" [class.done]="t.completed">{{t.title}}</div>
+    </mat-list-item>
+  </mat-list>
+</mat-card>

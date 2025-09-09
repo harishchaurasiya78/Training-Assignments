@@ -1,0 +1,12 @@
+{
+  "Table": "LeaveRequests",
+  "Columns": [
+    { "Name": "RequestId", "Type": "GUID", "PrimaryKey": true },
+    { "Name": "EmployeeName", "Type": "Text" },
+    { "Name": "StartDate", "Type": "Date" },
+    { "Name": "EndDate", "Type": "Date" },
+    { "Name": "Reason", "Type": "Text" },
+    { "Name": "Status", "Type": "Choice", "Choices": ["Pending", "Approved", "Rejected"] },
+    { "Name": "ManagerComments", "Type": "Text" }
+  ]
+}

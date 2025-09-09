@@ -1,0 +1,7 @@
+<div *ngIf="cartItems.length === 0">Cart is empty</div>
+<div *ngFor="let item of cartItems">
+  <h4>{{ item.name }} ({{ item.price }})</h4>
+  <input type="number" [value]="item.quantity" (input)="updateQuantity(item.productId, $event.target.value, 10)" />
+  <button (click)="removeItem(item.productId)">Remove</button>
+</div>
+<button *ngIf="cartItems.length > 0" (click)="checkout()">Checkout</button>

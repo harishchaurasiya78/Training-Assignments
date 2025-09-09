@@ -1,0 +1,9 @@
+<div *ngIf="error">{{ error }}</div>
+<div class="products">
+  <div class="product" *ngFor="let product of products">
+    <h3>{{ product.name }}</h3>
+    <p>Price: {{ product.price }}</p>
+    <p>Stock: {{ product.stock }}</p>
+    <button (click)="addToCart(product)" [disabled]="product.stock === 0">Add to Cart</button>
+  </div>
+</div>

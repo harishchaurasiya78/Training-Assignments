@@ -1,0 +1,7 @@
+.card { max-width: 700px; margin: 30px auto; padding: 16px; }
+.add-form { display:flex; gap:8px; align-items:center; margin-bottom:12px; }
+.full { flex:1; }
+.task-item { display:flex; align-items:center; gap:12px; }
+.title { flex:1; }
+.done { text-decoration: line-through; color: rgba(0,0,0,0.4); }
+.error { color: red; margin: 12px 0; }

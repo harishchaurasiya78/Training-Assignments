@@ -1,0 +1,10 @@
+{
+  "Topic": "LeaveRequest",
+  "Questions": [
+    "What is your name?",
+    "What is the leave start date?",
+    "What is the leave end date?",
+    "Please provide the reason for leave."
+  ],
+  "ConfirmationMessage": "Your leave request has been submitted. A manager will review it."
+}

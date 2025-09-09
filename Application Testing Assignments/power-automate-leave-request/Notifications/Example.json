@@ -1,0 +1,7 @@
+{
+  "EmployeeNotification": {
+    "Approved": "Your leave request from {StartDate} to {EndDate} has been approved.",
+    "Rejected": "Your leave request has been rejected. Reason: {ManagerComments}."
+  },
+  "ManagerNotification": "New leave request from {EmployeeName} for {StartDate} - {EndDate}. Approve or Reject."
+}
